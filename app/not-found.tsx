@@ -1,6 +1,7 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { FileQuestion } from 'lucide-react'
+"use client";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { FileQuestion } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -13,13 +14,19 @@ export default function NotFound() {
             </div>
           </div>
           <div className="space-y-2">
-            <h1 className="text-2xl font-semibold tracking-tight">Page not found</h1>
+            <h1 className="text-2xl font-semibold tracking-tight">
+              Page not Ready
+            </h1>
             <p className="text-slate-500">
-              We couldn't find the page you're looking for. Please check the URL or go back.
+              We couldn't find the page you're looking for. Please check the URL
+              or go back.
             </p>
           </div>
           <div className="flex justify-center gap-4">
-            <Button asChild>
+            <Button
+              asChild
+              className="bg-gradient-to-r from-blue-500 to-purple-500"
+            >
               <Link href="/">Return home</Link>
             </Button>
             <Button variant="outline" onClick={() => window.history.back()}>
@@ -29,6 +36,5 @@ export default function NotFound() {
         </div>
       </main>
     </div>
-  )
+  );
 }
-
